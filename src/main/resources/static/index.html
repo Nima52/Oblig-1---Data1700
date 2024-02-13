@@ -3,24 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script defer src="main.js"></script>
 </head>
 <body>
-    <h1>Bestilling av konobiletter</h1>
-    <div>
-        <form action="" method="post">
-            <label for="velg-film">Velg film:</label> <select required name="" id="velg-film"></select> <br>
-            <label for="antall">Antall</label> <input required type="number" name="" id="antall"> <br>
-            <label for="fornavn">Fornavn</label> <input required type="text" name="" id="fornavn"> <br>
-            <label for="etternavn">Etternavn</label> <input required type="text" name="" id="etternavn"> <br>
-            <label for="telefonnr">Telefonnr</label> <input required type="tel" name="" id="telefonnr"> <br>
-            <label for="epost">Epost</label> <input required type="email" name="" id="epost"> <br>
+    <h1>Bestilling av kinobiletter</h1>
 
-            <input type="submit" value="Kjøp billett">
+    <div>
+        <form method="post" id="kjøp-billett">
+            <label for="velg-film">Velg film:</label>
+            <select name="" id="velg-film">
+                <option disabled selected>Velg film her</option>
+            </select> <br>
+
+            <label for="antall">Antall</label>
+            <input type="number" name="" id="antall" step="1"> <br>
+
+            <label for="fornavn">Fornavn</label>
+            <input type="text" name="" id="fornavn"> <br>
+
+            <label for="etternavn">Etternavn</label>
+            <input type="text" name="" id="etternavn"> <br>
+
+            <label for="telefonnr">Telefonnr</label>
+            <input type="tel" name="" id="telefonnr"> <br>
+
+            <label for="epost">Epost</label>
+            <input type="email" name="" id="epost"> <br>
+
+            <button type="submit">Kjøp billett</button>
         </form>
+
     </div>
 
-    <div>
+    <template id="billett-template">
+        <tr>
+            <td data-billett-key="film"></td>
+            <td data-billett-key="antall"></td>
+            <td data-billett-key="fornavn"></td>
+            <td data-billett-key="etternavn"></td>
+            <td data-billett-key="telefonnr"></td>
+            <td data-billett-key="epost"></td>
+        </tr>
+    </template>
+
+    <div id="billett-utsikt">
         <h2>Alle Billetter</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Film</th>
+                <th>Antall</th>
+                <th>Fornavn</th>
+                <th>Etternavn</th>
+                <th>Telefonnr</th>
+                <th>Epost</th>
+            </tr>
+            </thead>
+            <tbody id="billett-table-body"></tbody>
+        </table>
+
+        <button id="slett-alle-billett">Slett alle billettene</button>
+
     </div>
+
 </body>
 </html>
