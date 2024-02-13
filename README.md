@@ -4,7 +4,7 @@ OsloMet brukernavn: nikha7278
 
 GitHub brukernavn: Nima52
 
-Github repo URL: https://github.com/data1700-v23/oblig-1-Nima52
+Github repo URL: https://github.com/Nima52/Oblig-1---Data1700
 
 Fullt navn: Nima Khamisipour
 
